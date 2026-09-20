@@ -96,7 +96,7 @@ public class BatchConfig {
         return new EmployeeCsvPartitioner(Path.of(csvFile), gridSize);
     }
 
-//commented this line due to unexpected  runtime error
+    // comment out fault tolerance for now, as it is not working properly with partitioning
     @Bean
     public Step employeeWorkerStep(JobRepository jobRepository,
                                    PlatformTransactionManager transactionManager,
